@@ -2,6 +2,114 @@
 
 <div dir="rtl">
 
+# دستورات `pwd` و `cd`
+
+## دایرکتوری چیست؟
+
+دایرکتوری (Directory) یک پوشه است که حاوی لیستی از فایل‌ها و/یا دایرکتوری‌های دیگر است. این فایل‌ها ممکن است عکس، فیلم، متن و یا حتی دایرکتوری دیگری باشند. در واقع دایرکتوری یک ساختار برای سازمان‌دهی فایل‌ها در کامپیوتر است.
+
+</div>
+
+```
+Project
+├── GitLab.jpg
+├── Intro.txt
+├── Linux
+│   ├── Manjaro
+│   └── Ubuntu.png
+└── video.mp4
+
+3 directories, 4 files
+```
+<div dir="rtl">
+
+**توضیحات :**
+
+* `.` شاخص دایرکتوری فعلی (Current Directory)
+* `..` شاخص دایرکتوری سطح بالاتر (Parent Directory)
+* Subdirectoryها زیرشاخه‌های دایرکتوری محسوب می‌شوند.
+
+## دستور `pwd`
+
+این دستور (Print Working Directory) مسیر کامل دایرکتوری فعلی را نمایش می‌دهد:
+
+</div>
+
+```terminal
+user@Machine:~$ pwd
+/home/user
+user@Machine:~$
+```
+<div dir="rtl">
+
+## دستور `cd`
+
+این دستور (Change Directory) برای جابجایی بین دایرکتوری‌های مختلف استفاده می‌شود:
+
+### ۱. وارد کردن آدرس مقصد بصورت کامل
+
+آدرس کامل (Absolute Path) همیشه از ریشه (`/`) شروع می‌شود:
+
+</div>
+
+```terminal
+user@Machine:~$ cd /home/USERNAME/Desktop
+```
+
+<div dir="rtl">
+
+### ۲. آدرس نسبی (Relative Path)
+
+مسیر نسبی نسبت به دایرکتوری فعلی تعیین می‌شود. برای مثال اگر در `/home/user` باشید:
+
+</div>
+
+```terminal
+# وارد پوشه Desktop درون دایرکتوری فعلی
+user@Machine:~$ cd Desktop
+user@Machine:~/Desktop$
+```
+
+<div dir="rtl">
+
+### ۳. بازگشت به دایرکتوری سطح بالاتر
+
+با استفاده از `..` می‌توان به دایرکتوری مادر (Parent) بازگشت:
+
+</div>
+
+```terminal
+user@Machine:~/Desktop$ cd ..
+user@Machine:~$
+```
+<div dir="rtl">
+
+### ۴. رفتن به دایرکتوری خانه کاربر
+
+استفاده از `cd` بدون آرگومان یا `cd ~` کاربر را به پوشه خانگی‌اش برمی‌گرداند:
+
+</div>
+
+```terminal
+user@Machine:~/Downloads$ cd
+user@Machine:~$
+```
+<div dir="rtl">
+
+### ۵. استفاده از `-` برای بازگشت به دایرکتوری قبلی
+
+</div>
+
+```terminal
+user@Machine:~/Projects$ cd ~/Downloads
+user@Machine:~/Downloads$ cd -
+/home/user/Projects
+user@Machine:~/Projects$
+```
+
+
+<div dir="rtl">
+
 # دستور `ls`
 
 این دستور برای مشاهدهٔ محتویات فایل‌ها و دایرکتوری‌ها در لینوکس استفاده می‌شود. در صورت استفاده از این دستور در بخش فرمان (Terminal)، نام فایل‌ها و دایرکتوری‌های موجود در دایرکتوری فعلی نمایش پیدا می‌کنند.
