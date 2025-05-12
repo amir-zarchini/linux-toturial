@@ -160,9 +160,9 @@ linux.jpg  photos  my_folder  tasks.txt
 ```terminal
 user@machine:~/ls-commands$ ls -l
 total 200
-drwxrwxr-x 2 quera quera  4096 Aug 10 10:54 linux.jpg
-drwxr-xr-x 4 quera quera  4096 Aug 10 11:03 my_folder
--rw-r--r-- 1 quera quera  4096 Aug 10 15:09 tasks.txt
+drwxrwxr-x 2 user user  4096 Aug 10 10:54 linux.jpg
+drwxr-xr-x 4 user user  4096 Aug 10 11:03 my_folder
+-rw-r--r-- 1 user user  4096 Aug 10 15:09 tasks.txt
 ```
 
 <div dir="rtl">
@@ -188,7 +188,7 @@ drwxr-xr-x 4 quera quera  4096 Aug 10 11:03 my_folder
 > echo "Hello World" > /tmp/new_hello
 # نمایش دستور ls برای مسیر جدید
 user@machine:~/ls-commands$ ls -l /tmp/new_hello
--rw-r--r-- 1 quera quera   12 Aug 10 15:09 /tmp/new_hello
+-rw-r--r-- 1 user user   12 Aug 10 15:09 /tmp/new_hello
 # نمایش محتوای فایل
 user@machine:~/ls-commands$ cat /tmp/new_hello
 Hello World
@@ -246,9 +246,9 @@ linux.jpg  my_folder/  photos/  tasks.txt
 ```terminal
 user@machine:~/ls-commands$ ls -ltr
 total 200
-drwxr-xr-x 4 quera quera  4096 Aug 10 11:03 my_folder
--rw-r--r-- 1 quera quera  4096 Aug 10 15:09 tasks.txt
--rw-r--r-- 1 quera quera  18041 Aug 10 10:54 linux.jpg
+drwxr-xr-x 4 user user  4096 Aug 10 11:03 my_folder
+-rw-r--r-- 1 user user  4096 Aug 10 15:09 tasks.txt
+-rw-r--r-- 1 user user  18041 Aug 10 10:54 linux.jpg
 ```
 
 <div dir="rtl">
@@ -267,9 +267,9 @@ drwxr-xr-x 4 quera quera  4096 Aug 10 11:03 my_folder
 ```terminal
 user@machine:~/ls-commands$ ls -lh
 total 200K
--rw-r--r-- 1 quera quera  4.0K Aug 10 15:09 tasks.txt
--rw-r--r-- 1 quera quera 12K   Aug 10 10:54 linux.jpg
-drwxr-xr-x 4 quera quera  4.0K Aug 10 11:03 my_folder
+-rw-r--r-- 1 user user  4.0K Aug 10 15:09 tasks.txt
+-rw-r--r-- 1 user user 12K   Aug 10 10:54 linux.jpg
+drwxr-xr-x 4 user user  4.0K Aug 10 11:03 my_folder
 ```
 
 
@@ -298,10 +298,10 @@ drwxr-xr-x 4 quera quera  4.0K Aug 10 11:03 my_folder
 | --------- | ------------------------------------------- | ---------------------------------------------------------------------- |
 | `ls`      | نمایش فایل‌ها و پوشه‌های دایرکتوری جاری     | `$ ls` → `linux.jpg  task.txt`                                         |
 | `ls -t`   | مرتب‌سازی بر اساس زمان آخرین تغییر          | `$ ls -t` → `task.txt  linux.jpg`                                      |
-| `ls -l`   | نمایش اطلاعات کامل فایل‌ها                  | `$ ls -l` → `-rw-r--r-- 1 quera quera  1054 Aug 10 10:52 task.txt`     |
+| `ls -l`   | نمایش اطلاعات کامل فایل‌ها                  | `$ ls -l` → `-rw-r--r-- 1 user user  1054 Aug 10 10:52 task.txt`     |
 | `ls -lt`  | اطلاعات کامل + مرتب‌سازی زمانی              | `$ ls -lt` → (task.txt اول، بعد linux.jpg با جزئیات)                   |
 | `ls -a`   | نمایش فایل‌های مخفی                         | `$ ls -a` → `.  ..  .hidden_file  linux.jpg`                           |
-| `ls -la`  | فایل‌های مخفی + اطلاعات کامل                | `$ ls -la` → `-rw-r--r-- 1 quera quera 1024 Aug 10 10:52 .hidden_file` |
+| `ls -la`  | فایل‌های مخفی + اطلاعات کامل                | `$ ls -la` → `-rw-r--r-- 1 user user 1024 Aug 10 10:52 .hidden_file` |
 | `ls -lS`  | مرتب‌سازی بر اساس اندازه فایل (بزرگ‌تر اول) | `$ ls -lS` → (بزرگ‌ترین فایل در خط اول)                                |
 | `ls -ltr` | نمایش کامل + مرتب‌سازی زمانی معکوس          | `$ ls -ltr` → (قدیمی‌ترین فایل اول، جدیدترین آخر)                      |
 | `ls -lh`  | نمایش اندازه‌ها به‌صورت خوانا               | `$ ls -lh` → `1.1K task.txt  512K linux.jpg`                           |
