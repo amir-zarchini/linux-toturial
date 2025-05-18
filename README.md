@@ -375,6 +375,7 @@ history 5
 history -c
 ```
 
+<div dir="rtl">
 
 # دستورات mkdir و rmdir
 
@@ -386,33 +387,49 @@ history -c
 
 دستوری که از آن برای ساخت پوشه (Make Directory) با کمک این دستور می‌توانیم یک دایرکتوری بسازیم. برای مثال:
 
+</div>
+
 ```bash
-mkdir QueraQuera
+mkdir Test
 ```
+
+<div dir="rtl">
 
 ### ساخت چند پوشه با یک دستور
 
 برای ساخت چند پوشه به صورت هم‌زمان می‌توانیم به صورت زیر عمل کنیم:
 
+</div>
+
 ```bash
 mkdir a b c
 ```
 
-### ساخت پوشه همراه با پرچم
+<div dir="rtl">
 
-می‌توانیم از پرچم `-v` برای گرفتن خروجی نیز استفاده کنیم:
+### ساخت پوشه همراه با flag
+
+می‌توانیم از `-v` برای گرفتن خروجی نیز استفاده کنیم:
+
+</div>
 
 ```bash
 mkdir -v a b c
 ```
 
+<div dir="rtl">
+
 ### نحوه ایجاد دایرکتوری با وجود داشتن زیر دایرکتوری
 
 برای مثال اگر بخواهیم دایرکتوری به نام `inside` و سپس دایرکتوری دیگری با نام `inside-a` ایجاد کنیم:
 
+</div> 
+
 ```bash
 mkdir -p inside-a/inside-inside-a
 ```
+
+<div dir="rtl">
 
 ---
 
@@ -420,16 +437,24 @@ mkdir -p inside-a/inside-inside-a
 
 دستوری که از آن برای حذف پوشه (Remove Directory) با کمک این دستور می‌توانیم یک دایرکتوری را حذف کنیم.
 
+</div> 
+
 ```bash
-mkdir QueraQuera
-rmdir QueraQuera
+mkdir Test
+rmdir Test
 ```
+
+<div dir="rtl">
 
 در صورتی که دایرکتوری مورد نظر خالی نباشد (یعنی فایل یا پوشه دیگری درون آن باشد) با پیغام خطای زیر مواجه می‌شوید:
 
+</div>
+
 ```bash
-rmdir: failed to remove 'QueraQuera': Directory not empty
+rmdir: failed to remove 'Test': Directory not empty
 ```
+
+<div dir="rtl">
 
 ---
 
@@ -437,21 +462,31 @@ rmdir: failed to remove 'QueraQuera': Directory not empty
 
 برای مثال:
 
+</div> 
+
 ```bash
 mkdir -p a/b/c/
 ```
 
+<div dir="rtl">
+
 برای حذف آن:
+
+</div> 
 
 ```bash
 rm -r a/
 ```
+
+<div dir="rtl">
 
 ---
 
 ## تمرین پایانی
 
 ساختار فایل زیر را ایجاد کنید:
+
+</div>
 
 ```
 app
@@ -461,9 +496,13 @@ app
 │   └── 2020
 ```
 
+<div dir="rtl">
+
 سپس کل این ساختار را پاک کنید.
 
 ### پاسخ:
+
+</div>
 
 ```bash
 mkdir -p app/node_modules app/src app/public/{images/2020}
